@@ -15,7 +15,7 @@ for (let i = 0; i < userInput.length; i++) {
   userInput[i].addEventListener("click", (e) => {
     let computerChoice = randomInt();
 
-    updateComputerChoice(computerChoice); 
+    updateComputerChoice(computerChoice);
 
     // if (i === 0) {
     //   console.log(rock);
@@ -25,11 +25,11 @@ for (let i = 0; i < userInput.length; i++) {
     //   console.log(scissors);
     // }
 
-    // if (i === computerChoice) {
-    //   console.log(tieText);
-    // } else if (i === 0 && computerChoice === 2) {
-    //   console.log(winText + " rock beats paper");
-    // }
+    if (i === computerChoice) {
+      console.log(tieText);
+    } else if (i === 0 && computerChoice === 2) {
+      console.log(winText + " rock beats paper");
+    }
   });
 }
 
@@ -42,6 +42,11 @@ function randomInt() {
 function updateComputerChoice(computerNum) {
   let computerImg = document.getElementById("computer-input");
 
+  computerImg.classList.add("spin");
+  computerImg.addEventListener("animationend", function () {
+    computerImg.classList.remove("spin");
+  });
+
   if (computerNum === 0) {
     computerImg.src = "/images/rock.png";
 
@@ -53,4 +58,4 @@ function updateComputerChoice(computerNum) {
     computerImg.src = "/images/scissors.png";
     console.log(scissors);
   }
-} 
+}

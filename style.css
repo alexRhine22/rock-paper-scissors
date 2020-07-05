@@ -42,3 +42,16 @@
 .score-container {
   font-size: 42px;
 }
+
+.spin {
+  animation-name: spin;
+  animation-duration: 1s;
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(360deg);}
+  50% {transform: rotate(360deg);}
+  75% {transform: rotate(360deg);}
+  100% {transform: rotate(360deg);}
+}
