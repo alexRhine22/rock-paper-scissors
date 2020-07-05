@@ -1,0 +1,44 @@
+:root {
+  --black: #000;
+  --white: #fff;
+}
+
+/** 
+* Globals 
+*/
+* {
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 700px;
+}
+.page-title {
+  text-align: center;
+}
+
+.game,
+.score-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.game__input {
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.game__input:hover {
+  transform: rotate(20deg);
+}
+.game__input-title {
+  font-size: 32px;
+}
+
+.score-container {
+  font-size: 42px;
+}
